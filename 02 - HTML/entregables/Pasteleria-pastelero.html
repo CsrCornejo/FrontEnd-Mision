@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout y Rutas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: pink;
+        }
+
+        /* Estilo de header */
+        header {
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: pink;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            /* only for demonstration, should be removed */
+            background-color: pink;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        .inventario {
+            width: 30%;
+        }
+
+        article {
+            padding: 20px;
+            width: 70%;
+        }
+        article h1 {
+            color: pink;
+        }
+
+        section {
+            display: flex;
+            padding: 20px 0;
+        }
+
+        .info {
+            display: flex;
+        }
+        .info .desc,
+        .info .precio {
+            width: 50%;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table th {
+            color: palevioletred;
+        }
+        
+        table,
+        table td,
+        table th {
+            border: 1px solid blueviolet;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: pink;
+            padding: 10px;
+            color: blueviolet;
+            display: flex;
+        }
+
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .inventario,
+            article,
+            table,
+            footer .col {
+                width: 100%;
+                height: auto;
+            }
+
+            section,
+            .sabores,
+            footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./imagenes/pasteleria logo 500.png" alt="logo" width="150px" height="150px">
+        <h2>Pasteleria</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./Pasteleria-cliente.html">Cliente</a></li>
+            <li><a href="./Pasteleria-pastelero.html">Pastelero</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="inventario">
+            <h1>Inventario</h1>
+            <table>
+                <tr>
+                    <th>Opcion</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Vainilla</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Chocolate</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Fresa</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Brillos</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Fruta</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Mermelada</td>
+                    <td>2</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <article>
+            <h1>Pedidos</h1>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>020 0203 0203</td>
+                    <td>1@hotmail.com</td>
+                    <td>Con brillos rosas</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>392 9287 3812</td>
+                    <td>2@hotmail.com</td>
+                    <td>Sin merengue</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <footer>
+        <div class="col">
+            <h2>Horario</h2>
+            00:00 pm - 12:05 am
+        </div>
+        <div class="col">
+            <h2>Direccion</h2>
+            Enrique Segobiano Jalisco, Mexico.
+        </div>
+        <div class="col">
+            <h2>Telefono</h2>
+            00 - 0000 - 0000
+        </div>
+    </footer>
+
+</body>
+
+</html>

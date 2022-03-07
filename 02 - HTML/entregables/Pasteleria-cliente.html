@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout y Rutas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: pink;
+        }
+
+        /* Estilo de header */
+        header {
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: pink;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            /* only for demonstration, should be removed */
+            background-color: pink;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        form {
+            width: 30%;
+        }
+
+        article {
+            padding: 20px;
+            width: 70%;
+        }
+        article h1 {
+            color: pink;
+        }
+
+        section {
+            display: flex;
+            padding: 20px 0;
+        }
+
+        .info {
+            display: flex;
+        }
+        .info .desc,
+        .info .precio {
+            width: 50%;
+        }
+
+        .sabores {
+            display: flex;
+        }
+        .sabores .sabor {
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: pink;
+            padding: 10px;
+            color: blueviolet;
+            display: flex;
+        }
+
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            form,
+            article,
+            .sabores .sabor,
+            footer .col {
+                width: 100%;
+                height: auto;
+            }
+
+            section,
+            .sabores,
+            footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="./imagenes/pasteleria logo 500.png" alt="logo" width="150px" height="150px">
+        <h2>Pasteleria</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./Pasteleria-cliente.html">Cliente</a></li>
+            <li><a href="./Pasteleria-pastelero.html">Pastelero</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <form action="">
+            <legend>Haz tu pedido</legend>
+            <fieldset>
+                <legend>Información Personal</legend>
+                Nombre: <input name='nombre' type='text' tabindex='1'><br>
+                Telefono: <input name='tel' type='number' tabindex='2'><br>
+                Correo: <input name='correo' type='email' tabindex='3'><br>
+                Descripcion pedido: <input name='descripcion' type='text' tabindex='4'><br>
+            </fieldset>
+            <fieldset>
+                <legend>Sabor</legend>
+                <input type="radio" name="radio1" id="radio1"> <label for="radio1">Fresa $50</label><br>
+                <input type="radio" name="radio2" id="radio2"> <label for="radio2">Vainilla $50</label><br>
+                <input type="radio" name="radio3" id="radio3"> <label for="radio3">Chocolate $70</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Adornos</legend>
+                <input type="checkbox" name="checkbox1" id="checkbox1"> <label for="checkbox1">Brillos $20</label><br>
+                <input type="checkbox" name="checkbox2" id="checkbox2"> <label for="checkbox2">Fruta $30</label><br>
+                <input type="checkbox" name="checkbox3" id="checkbox3"> <label for="checkbox3">Mermelada $45</label><br>
+            </fieldset>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <article>
+            <h1>Sabores</h1>
+            <div class="sabores">
+                <div class="sabor">
+                    <img src="./imagenes/fresa.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Fresa</div>
+                        <div class="precio">Precio $50</div>
+                    </div>
+                </div>
+                <div class="sabor">
+                    <img src="./imagenes/vainilla.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Vainilla</div>
+                        <div class="precio">Precio $50</div>
+                    </div>
+                </div>
+                <div class="sabor">
+                    <img src="./imagenes/chocolate.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Chocolate</div>
+                        <div class="precio">Precio $70</div>
+                    </div>
+                </div>
+            </div>
+            <h1>Adornos</h1>
+            <div class="sabores">
+                <div class="sabor">
+                    <img src="./imagenes/brillos.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Brillos</div>
+                        <div class="precio">Precio $20</div>
+                    </div>
+                </div>
+                <div class="sabor">
+                    <img src="./imagenes/fruta.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Fruta</div>
+                        <div class="precio">Precio $30</div>
+                    </div>
+                </div>
+                <div class="sabor">
+                    <img src="./imagenes/mermelada.jpg" alt="logo" width="100px" height="100px"><br>
+                    <div class="info">
+                        <div class="desc">Mermelada</div>
+                        <div class="precio">Precio $45</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="col">
+            <h2>Horario</h2>
+            00:00 pm - 12:05 am
+        </div>
+        <div class="col">
+            <h2>Direccion</h2>
+            Enrique Segobiano Jalisco, Mexico.
+        </div>
+        <div class="col">
+            <h2>Telefono</h2>
+            00 - 0000 - 0000
+        </div>
+    </footer>
+
+</body>
+
+</html>
